@@ -1,0 +1,51 @@
+.example-card {
+    max-width: 350px;
+    background-color: rgb(39, 45, 58);
+    color: white;
+    margin-bottom: 20px;
+}
+
+img {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.subTitle {
+    color: rgb(101, 106, 126);
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 0 20px;
+    width: 95%;
+    height: 40px;
+    font-size: 17px;
+    background: transparent;
+    border-radius: 3px;
+    color: white;
+    margin-right: 15px;
+    border: 1px rgb(63, 72, 204) solid;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button:hover {
+    background-color: rgb(63, 72, 204, .4);
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    padding-bottom: 7px;
+}

@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
+import { FilmCardComponent } from './film-card/film-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilmCardComponent
   ],
   imports: [
     BrowserModule,
