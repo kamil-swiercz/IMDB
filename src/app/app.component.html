@@ -1,24 +1,13 @@
 <main>
     <nav>
         <div class="buttons">
-            <button class="movies">Movies</button>
-            <button class="tvShows">TV Shows</button>
-            <button class="all">All</button>
+            <button class="movies" routerLink='/movies' routerLinkActive="movies-active">Movies</button>
+            <button class="tvShows" routerLink='/tv-shows' routerLinkActive="tvShows-active">TV Shows</button>
+            <button class="all" routerLink='/all' routerLinkActive="all-active">All</button>
         </div>
-        <input type="text" placeholder="search">
+        <input [formControl]="queryControl" type="text" placeholder="search">
     </nav>
-    <section>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-      <app-film-card></app-film-card>
-    </section>
+    <router-outlet></router-outlet>
 </main>
-
 
 <!--<mat-checkbox color="accent">Check me!</mat-checkbox>-->

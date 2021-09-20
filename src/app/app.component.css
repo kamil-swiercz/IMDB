@@ -8,12 +8,6 @@ nav {
     margin-bottom: 30px;
 }
 
-section {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .buttons {
     display: flex;
 }
@@ -26,6 +20,7 @@ button {
     border-radius: 3px;
     color: white;
     margin-right: 15px;
+    white-space: nowrap;
 }
 
 .movies {
@@ -37,12 +32,31 @@ button {
     cursor: pointer;
 }
 
+.movies-active {
+    background-color: rgb(63, 72, 204);
+}
+
+.movies-active:hover {
+    background-color: rgb(63, 72, 204);
+    cursor: pointer;
+}
+
 .tvShows {
-    background-color: rgb(0, 168, 243);
     border: 1px rgb(0, 168, 243) solid;
 }
 
 .tvShows:hover {
+    background-color: rgb(0, 168, 243, .4);
+    cursor: pointer;
+}
+
+.tvShows-active {
+    background-color: rgb(0, 168, 243);
+    border: 1px rgb(0, 168, 243) solid;
+}
+
+.tvShows-active:hover {
+    background-color: rgb(0, 168, 243);
     cursor: pointer;
 }
 
@@ -53,6 +67,19 @@ button {
 
 .all:hover {
     background-color: rgb(21, 203, 161, .4);
+    color: white;
+    cursor: pointer;
+}
+
+.all-active {
+    border: 1px rgb(21, 203, 161) solid;
+    background-color: rgb(21, 203, 161);
+    color: white;
+}
+
+.all-active:hover {
+    border: 1px rgb(21, 203, 161) solid;
+    background-color: rgb(21, 203, 161);
     color: white;
     cursor: pointer;
 }
