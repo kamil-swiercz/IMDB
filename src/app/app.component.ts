@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter } from 'rxjs/operators';
+import { LoadingService } from './loading.service';
 import { QueryService } from './query.service';
 
 @Component({
@@ -15,7 +16,9 @@ export class AppComponent implements OnInit, OnDestroy{
   title = 'IMDB';
   queryControl: FormControl = new FormControl()
 
-  constructor(private queryService: QueryService) { }
+  loading$ = this.loader.loading$;
+
+  constructor(private queryService: QueryService, public loader: LoadingService) { }
 
   ngOnInit(): void {
     this._subscription.add(

@@ -7,7 +7,13 @@
         </div>
         <input [formControl]="queryControl" type="text" placeholder="search">
     </nav>
+    <mat-spinner 
+        color="accent"
+        class="spinner"
+        [mode]="'indeterminate'"
+        *ngIf="loading$ | async"
+    ></mat-spinner>
     <router-outlet></router-outlet>
 </main>
 
-<!--<mat-checkbox color="accent">Check me!</mat-checkbox>-->
+<!-- <mat-checkbox color="accent">Check me!</mat-checkbox> -->
