@@ -1,1 +1,10 @@
-<p>all-productions works!</p>
+<section *ngIf = "allProductions$ | async as allProductions">
+    <app-film-card
+        *ngFor="let allProduction of allProductions"
+        [title]='allProduction.name? allProduction.name : allProduction.title'
+        [posterPath]='allProduction.poster_path'
+        [description]='allProduction.overview'
+        [releaseDate]='allProduction.first_air_date? allProduction.first_air_date : allProduction.release_date'
+        [voteAverage]='allProduction.vote_average'
+    ></app-film-card>
+</section>
