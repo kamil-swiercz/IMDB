@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -16,6 +17,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { TvShowsComponent } from './tv-shows/tv-shows.component';
 import { AllProductionsComponent } from './all-productions/all-productions.component';
 import { NetworkInterceptor } from './network.interceptor';
+import { DetailProductionComponent } from './detail-production/detail-production.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { NetworkInterceptor } from './network.interceptor';
     FilmCardComponent,
     MoviesComponent,
     TvShowsComponent,
-    AllProductionsComponent
+    AllProductionsComponent,
+    DetailProductionComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { NetworkInterceptor } from './network.interceptor';
     MatCheckboxModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatIconModule,
     ReactiveFormsModule 
   ],
   providers: [{
