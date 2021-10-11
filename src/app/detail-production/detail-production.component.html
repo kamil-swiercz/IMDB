@@ -1,0 +1,30 @@
+<section *ngIf="detailProduction$ | async as detailProduction">
+    <img src= "{{detailProduction.poster_path? posterPictureUrl + detailProduction.poster_path : 'assets/default-poster.jpg'}}">
+    <div class="main-container">
+        <div class="header-container">
+            <h1>{{detailProduction.title}}</h1>
+            <div class="tags">
+                <span *ngFor="let tag of detailProduction.genres">{{tag.name}}</span>
+            </div>
+        </div>
+        <div class="description">
+            {{detailProduction.overview}}
+        </div>
+        <div class="information">
+            <mat-icon color="accent">star</mat-icon>
+            <span>IMDb RATING: <span class="data">{{detailProduction.vote_average}}/10</span></span>
+        </div>
+        <div class="information">
+            <mat-icon color="accent">people</mat-icon>
+            <span>VOTE COUNT: <span class="data">{{detailProduction.vote_count}}</span></span>
+        </div>
+        <div class="information">
+            <mat-icon color="accent"> insert_chart</mat-icon>
+            <span>POPULARITY: <span class="data">{{detailProduction.popularity}}</span></span>
+        </div>
+        <div class="information">
+            <mat-icon color="accent">photo_camera</mat-icon>
+            <span>CAST: <span class="data">&nbsp;&nbsp; Chuck Norris &nbsp;&nbsp; Borys Szyc &nbsp;&nbsp; Szymon Łącki</span></span>
+        </div>
+    </div>
+</section>

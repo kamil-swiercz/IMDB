@@ -6,16 +6,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./film-card.component.css']
 })
 export class FilmCardComponent implements OnInit {
-  @Input() title!: string;
-  @Input() posterPath!: string;
-  @Input() description!: string;
-  @Input() releaseDate!: string;
-  @Input() voteAverage!: number;
+  @Input() id: number | undefined;
+  @Input() title: string | undefined;
+  @Input() posterPath: string | undefined;
+  @Input() description: string | undefined;
+  @Input() releaseDate: string | undefined;
+  @Input() voteAverage: number | undefined;
+  @Input() category!: string;
   posterPictureUrl: string = 'https://image.tmdb.org/t/p/w500';
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

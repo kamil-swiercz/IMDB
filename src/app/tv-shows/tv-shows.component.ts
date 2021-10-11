@@ -18,7 +18,7 @@ export class TvShowsComponent implements OnInit {
   ngOnInit(): void {
     this.tvShows$ = this.queryService.query.pipe(
       switchMap(data => this.tvShowsService.getTvShows(data)),
-      tap(i => console.warn(i))
+      // tap(i => console.warn(i))
     )
   }
 

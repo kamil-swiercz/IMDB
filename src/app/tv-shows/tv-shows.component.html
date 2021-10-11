@@ -1,10 +1,12 @@
 <section *ngIf = "tvShows$ | async as tvShows">
     <app-film-card
         *ngFor="let movie of tvShows.results"
+        [id]='movie.id'
         [title]='movie.name'
         [posterPath]='movie.poster_path'
         [description]='movie.overview'
         [releaseDate]='movie.first_air_date'
         [voteAverage]='movie.vote_average'
+        category='/tv-shows'
     ></app-film-card>
 </section>
